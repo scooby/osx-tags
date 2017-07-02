@@ -53,7 +53,7 @@ class Tags(object):
         for key in self.TAG_XATTRS:
             try:
                 plist = self.xa.get(key)
-            except OSError:
+            except (OSError, IOError):
                 pass
             else:
                 tags.update(readPlistFromString(plist))
@@ -74,7 +74,7 @@ class Tags(object):
         for key in self.TAG_XATTRS:
             try:
                 self.xa.remove(key)
-            except OSError:
+            except (IOError, OSError):
                 pass
 
     def add(self, *tags):

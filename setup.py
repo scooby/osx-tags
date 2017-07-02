@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='osx-tags',
-    version='0.1',
+    version='0.1.2',
     packages=['osx_tags'],
     description='Module to manipulate Finder tags on OS X',
     classifiers=[
@@ -16,5 +16,6 @@ setup(
         'xattr',
     ],
     license='MIT',
+    url='https://github.com/scooby/osx-tags',
     zip_safe=True
 )
